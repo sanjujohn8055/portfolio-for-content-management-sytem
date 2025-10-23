@@ -1,0 +1,148 @@
+{% extends "base.html" %}
+
+{% block title %}Portfolio Platform - Create Your Professional Portfolio{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="container">
+    <div class="hero-content">
+      <h1 class="hero-title">Build Your Professional Portfolio</h1>
+      <p class="hero-subtitle">Showcase your projects, skills, and achievements with a beautiful, modern portfolio</p>
+      <div class="d-flex gap-3 justify-content-center flex-wrap mt-4">
+        <a href="{{ url_for('auth.signup') }}" class="hero-cta">
+          <i class="bi bi-rocket-takeoff me-2"></i>Create Your Portfolio
+        </a>
+        <a href="{{ url_for('main.demo_portfolio') }}" class="hero-cta" style="background: rgba(34, 197, 94, 0.2); border-color: rgba(34, 197, 94, 0.3);">
+          <i class="bi bi-eye me-2"></i>View Demo
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Why Choose Our Platform?</h2>
+    <div class="row">
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="text-center">
+          <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+            <i class="bi bi-palette text-primary" style="font-size: 2rem;"></i>
+          </div>
+          <h5>Beautiful Design</h5>
+          <p class="text-muted">Modern, responsive templates that look great on any device</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="text-center">
+          <div class="bg-success bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+            <i class="bi bi-github text-success" style="font-size: 2rem;"></i>
+          </div>
+          <h5>GitHub Integration</h5>
+          <p class="text-muted">Automatically import your repositories as portfolio projects</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="text-center">
+          <div class="bg-warning bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+            <i class="bi bi-lightning text-warning" style="font-size: 2rem;"></i>
+          </div>
+          <h5>Easy Management</h5>
+          <p class="text-muted">Intuitive admin panel to manage your projects and content</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="text-center">
+          <div class="bg-info bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+            <i class="bi bi-share text-info" style="font-size: 2rem;"></i>
+          </div>
+          <h5>Share Anywhere</h5>
+          <p class="text-muted">Get a custom URL to share your portfolio with employers</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="text-center">
+          <div class="bg-danger bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+            <i class="bi bi-speedometer2 text-danger" style="font-size: 2rem;"></i>
+          </div>
+          <h5>Fast & Secure</h5>
+          <p class="text-muted">Built with modern web technologies for speed and security</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="text-center">
+          <div class="bg-secondary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+            <i class="bi bi-phone text-secondary" style="font-size: 2rem;"></i>
+          </div>
+          <h5>Mobile Ready</h5>
+          <p class="text-muted">Looks perfect on desktop, tablet, and mobile devices</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Demo Section -->
+<section class="section bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <h2 class="mb-4">See It In Action</h2>
+        <p class="lead mb-4">Try our demo portfolio to see how easy it is to create and manage your professional presence online.</p>
+        <div class="d-flex gap-3 mb-4">
+          <div class="d-flex align-items-center">
+            <i class="bi bi-check-circle-fill text-success me-2"></i>
+            <span>Add Projects</span>
+          </div>
+          <div class="d-flex align-items-center">
+            <i class="bi bi-check-circle-fill text-success me-2"></i>
+            <span>Manage Content</span>
+          </div>
+          <div class="d-flex align-items-center">
+            <i class="bi bi-check-circle-fill text-success me-2"></i>
+            <span>Share Portfolio</span>
+          </div>
+        </div>
+        <div class="d-flex gap-3 flex-wrap">
+          <a href="{{ url_for('main.demo_portfolio') }}" class="btn btn-primary btn-lg">
+            <i class="bi bi-eye me-2"></i>View Demo Portfolio
+          </a>
+          <a href="{{ url_for('auth.guest_login') }}" class="btn btn-outline-primary btn-lg">
+            <i class="bi bi-person-check me-2"></i>Try Admin Panel
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="text-center">
+          <div class="bg-gradient rounded-3 p-5 text-white">
+            <i class="bi bi-laptop" style="font-size: 5rem; margin-bottom: 1rem;"></i>
+            <h4>Professional Portfolio</h4>
+            <p class="mb-0">Beautiful, responsive design that showcases your work</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="section">
+  <div class="container text-center">
+    <h2 class="mb-4">Ready to Build Your Portfolio?</h2>
+    <p class="lead mb-5">Join thousands of developers showcasing their work with professional portfolios</p>
+    <div class="d-flex gap-3 justify-content-center flex-wrap">
+      <a href="{{ url_for('auth.signup') }}" class="btn btn-primary btn-lg">
+        <i class="bi bi-person-plus me-2"></i>Get Started Free
+      </a>
+      <a href="{{ url_for('auth.guest_login') }}" class="btn btn-success btn-lg">
+        <i class="bi bi-person-check me-2"></i>Try Demo Mode
+      </a>
+    </div>
+    <p class="text-muted mt-3">
+      <small>No credit card required • Free forever • 2 minutes setup</small>
+    </p>
+  </div>
+</section>
+{% endblock %}

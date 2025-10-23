@@ -1,0 +1,171 @@
+{% extends "base.html" %}
+
+{% block title %}{{ project.title }} - Professional Portfolio{% endblock %}
+
+{% block content %}
+<!-- Project Header -->
+<section class="section pt-5">
+  <div class="container">
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb" class="mb-4">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{ url_for('main.index') }}">Home</a></li>
+        <li class="breadcrumb-item"><a href="{{ url_for('main.projects') }}">Projects</a></li>
+        <li class="breadcrumb-item active">{{ project.title }}</li>
+      </ol>
+    </nav>
+
+    <div class="row">
+      <div class="col-lg-8">
+        <!-- Project Image -->
+        {% if project.image %}
+        <div class="mb-4">
+          <img src="{{ url_for('static', filename=project.image) }}" 
+               class="img-fluid rounded-3 shadow-sm" 
+               alt="{{ project.title }}"
+               style="width: 100%; height: 400px; object-fit: cover;">
+        </div>
+        {% else %}
+        <div class="mb-4">
+          <div class="bg-gradient rounded-3 d-flex align-items-center justify-content-center shadow-sm" 
+               style="height: 400px;">
+            <i class="bi bi-code-slash text-white" style="font-size: 4rem;"></i>
+          </div>
+        </div>
+        {% endif %}
+
+        <!-- Project Content -->
+        <div class="mb-5">
+          <h1 class="display-5 fw-bold mb-3">{{ project.title }}</h1>
+          
+          <div class="d-flex align-items-center mb-4 text-muted">
+            <i class="bi bi-calendar3 me-2"></i>
+            <span>Created on {{ project.created_at.strftime('%B %d, %Y') }}</span>
+          </div>
+
+          <div class="project-description">
+            {{ project.description|replace('\n', '<br>')|safe }}
+          </div>
+        </div>
+
+        <!-- Project Actions -->
+        <div class="d-flex gap-3 mb-5 flex-wrap">
+          {% if project.url %}
+          <a href="{{ project.url }}" target="_blank" class="btn btn-primary btn-lg">
+            <i class="bi bi-box-arrow-up-right me-2"></i>View Live Demo
+          </a>
+          {% endif %}
+          <a href="{{ url_for('main.projects') }}" class="btn btn-outline-primary btn-lg">
+            <i class="bi bi-arrow-left me-2"></i>Back to Projects
+          </a>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="col-lg-4">
+        <div class="sticky-top" style="top: 100px;">
+          <!-- Project Info Card -->
+          <div class="card admin-card mb-4">
+            <div class="card-body">
+              <h5 class="card-title mb-3">
+                <i class="bi bi-info-circle me-2"></i>Project Info
+              </h5>
+              
+              <div class="mb-3">
+                <small class="text-muted d-block">Project Type</small>
+                <span class="badge bg-primary">Web Application</span>
+              </div>
+              
+              <div class="mb-3">
+                <small class="text-muted d-block">Created</small>
+                <strong>{{ project.created_at.strftime('%B %Y') }}</strong>
+              </div>
+              
+              {% if project.url %}
+              <div class="mb-3">
+                <small class="text-muted d-block">Live URL</small>
+                <a href="{{ project.url }}" target="_blank" class="text-decoration-none">
+                  <i class="bi bi-link-45deg me-1"></i>View Project
+                </a>
+              </div>
+              {% endif %}
+              
+              <div class="mb-0">
+                <small class="text-muted d-block mb-2">Technologies</small>
+                <div class="d-flex flex-wrap gap-1">
+                  <span class="badge bg-secondary">HTML</span>
+                  <span class="badge bg-secondary">CSS</span>
+                  <span class="badge bg-secondary">JavaScript</span>
+                  <span class="badge bg-secondary">Flask</span>
+                  <span class="badge bg-secondary">Python</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Admin Actions (if logged in) -->
+          {% if current_user.is_authenticated %}
+          <div class="card admin-card">
+            <div class="card-body">
+              <h5 class="card-title mb-3">
+                <i class="bi bi-gear me-2"></i>Admin Actions
+              </h5>
+              <div class="d-grid gap-2">
+                <a href="{{ url_for('main.edit_project', project_id=project.id) }}" 
+                   class="btn btn-outline-primary">
+                  <i class="bi bi-pencil me-2"></i>Edit Project
+                </a>
+                <button type="button" class="btn btn-outline-danger" 
+                        data-bs-toggle="modal" data-bs-target="#deleteModal">
+                  <i class="bi bi-trash me-2"></i>Delete Project
+                </button>
+              </div>
+            </div>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Related Projects -->
+<section class="section bg-light">
+  <div class="container">
+    <h3 class="text-center mb-5">More Projects</h3>
+    <div class="text-center">
+      <a href="{{ url_for('main.projects') }}" class="btn btn-primary">
+        <i class="bi bi-grid me-2"></i>View All Projects
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Delete Confirmation Modal -->
+{% if current_user.is_authenticated %}
+<div class="modal fade" id="deleteModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">
+          <i class="bi bi-exclamation-triangle text-warning me-2"></i>Confirm Delete
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure you want to delete "<strong>{{ project.title }}</strong>"?</p>
+        <p class="text-muted mb-0">This action cannot be undone.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <form method="POST" action="{{ url_for('main.delete_project', project_id=project.id) }}" class="d-inline">
+          <button type="submit" class="btn btn-danger">
+            <i class="bi bi-trash me-1"></i>Delete Project
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+{% endblock %}

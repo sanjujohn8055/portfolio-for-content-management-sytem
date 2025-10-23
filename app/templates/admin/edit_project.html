@@ -1,0 +1,181 @@
+{% extends "base.html" %}
+
+{% block title %}Edit {{ project.title }} - Admin{% endblock %}
+
+{% block content %}
+<!-- Admin Header -->
+<div class="admin-header">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-8">
+        <h1 class="mb-2">
+          <i class="bi bi-pencil-square me-3"></i>Edit Project
+        </h1>
+        <p class="mb-0 opacity-75">Update "{{ project.title }}" details</p>
+      </div>
+      <div class="col-md-4 text-md-end">
+        <a href="{{ url_for('main.admin_dashboard') }}" class="btn btn-light me-2">
+          <i class="bi bi-arrow-left me-2"></i>Dashboard
+        </a>
+        <a href="{{ url_for('main.project_detail', project_id=project.id) }}" class="btn btn-outline-light">
+          <i class="bi bi-eye me-2"></i>View
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card admin-card">
+          <div class="card-body p-4">
+            <form method="POST" class="needs-validation" novalidate>
+              {{ form.hidden_tag() }}
+              
+              <div class="mb-4">
+                {{ form.title.label(class="form-label fw-semibold") }}
+                {{ form.title(class="form-control form-control-lg") }}
+                {% if form.title.errors %}
+                  <div class="text-danger mt-1">
+                    {% for error in form.title.errors %}
+                      <small>{{ error }}</small>
+                    {% endfor %}
+                  </div>
+                {% endif %}
+                <div class="form-text">Choose a clear, descriptive title for your project</div>
+              </div>
+
+              <div class="mb-4">
+                {{ form.description.label(class="form-label fw-semibold") }}
+                {{ form.description(class="form-control", rows="6") }}
+                {% if form.description.errors %}
+                  <div class="text-danger mt-1">
+                    {% for error in form.description.errors %}
+                      <small>{{ error }}</small>
+                    {% endfor %}
+                  </div>
+                {% endif %}
+                <div class="form-text">Provide a detailed description of the project, technologies used, and key features</div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  {{ form.url.label(class="form-label fw-semibold") }}
+                  <div class="input-group">
+                    <span class="input-group-text">
+                      <i class="bi bi-link-45deg"></i>
+                    </span>
+                    {{ form.url(class="form-control") }}
+                  </div>
+                  {% if form.url.errors %}
+                    <div class="text-danger mt-1">
+                      {% for error in form.url.errors %}
+                        <small>{{ error }}</small>
+                      {% endfor %}
+                    </div>
+                  {% endif %}
+                  <div class="form-text">Live demo or repository URL (optional)</div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                  {{ form.image.label(class="form-label fw-semibold") }}
+                  <div class="input-group">
+                    <span class="input-group-text">
+                      <i class="bi bi-image"></i>
+                    </span>
+                    {{ form.image(class="form-control") }}
+                  </div>
+                  {% if form.image.errors %}
+                    <div class="text-danger mt-1">
+                      {% for error in form.image.errors %}
+                        <small>{{ error }}</small>
+                      {% endfor %}
+                    </div>
+                  {% endif %}
+                  <div class="form-text">Path to project image in static folder (optional)</div>
+                </div>
+              </div>
+
+              <!-- Current Image Preview -->
+              {% if project.image %}
+              <div class="mb-4">
+                <h6 class="fw-semibold mb-3">
+                  <i class="bi bi-image me-2"></i>Current Image
+                </h6>
+                <img src="{{ url_for('static', filename=project.image) }}" 
+                     class="img-thumbnail" 
+                     style="max-width: 300px; max-height: 200px; object-fit: cover;"
+                     alt="{{ project.title }}">
+              </div>
+              {% endif %}
+
+              <!-- Project Info -->
+              <div class="mb-4">
+                <h6 class="fw-semibold mb-3">
+                  <i class="bi bi-info-circle me-2"></i>Project Information
+                </h6>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <small class="text-muted d-block">Created</small>
+                    <strong>{{ project.created_at.strftime('%B %d, %Y at %I:%M %p') }}</strong>
+                  </div>
+                  <div class="col-sm-6">
+                    <small class="text-muted d-block">Status</small>
+                    {% if project.url %}
+                    <span class="badge bg-success">Live Project</span>
+                    {% else %}
+                    <span class="badge bg-secondary">Draft</span>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-flex gap-3 flex-wrap">
+                {{ form.submit(class="btn btn-primary btn-lg") }}
+                <a href="{{ url_for('main.project_detail', project_id=project.id) }}" class="btn btn-outline-primary btn-lg">
+                  <i class="bi bi-eye me-2"></i>View Project
+                </a>
+                <a href="{{ url_for('main.admin_dashboard') }}" class="btn btn-outline-secondary btn-lg">Cancel</a>
+                
+                <!-- Delete Button -->
+                <button type="button" class="btn btn-outline-danger btn-lg ms-auto" 
+                        data-bs-toggle="modal" data-bs-target="#deleteModal">
+                  <i class="bi bi-trash me-2"></i>Delete Project
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Delete Confirmation Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">
+          <i class="bi bi-exclamation-triangle text-warning me-2"></i>Confirm Delete
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure you want to delete "<strong>{{ project.title }}</strong>"?</p>
+        <p class="text-muted mb-0">This action cannot be undone.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <form method="POST" action="{{ url_for('main.delete_project', project_id=project.id) }}" class="d-inline">
+          <button type="submit" class="btn btn-danger">
+            <i class="bi bi-trash me-1"></i>Delete Project
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
