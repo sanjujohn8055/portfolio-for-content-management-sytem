@@ -4,9 +4,9 @@ A modern, responsive web application that enables developers and professionals t
 
 ## 🚀 Live Demo
 
-- **Live Application**: [Portfolio CMS](https://your-railway-url.up.railway.app)
-- **Demo Portfolio**: [View Demo](https://your-railway-url.up.railway.app/demo)
-- **Admin Panel**: [Try Guest Mode](https://your-railway-url.up.railway.app/admin/login)
+- **Live Application**: [Portfolio CMS](https://web-production-846c5.up.railway.app)
+- **Demo Portfolio**: [View Demo](https://web-production-846c5.up.railway.app/demo)
+- **Admin Panel**: [Try Guest Mode](https://web-production-846c5.up.railway.app/admin/login)
 
 ### Login Credentials
 - **Admin**: username `admin`, password `admin123`

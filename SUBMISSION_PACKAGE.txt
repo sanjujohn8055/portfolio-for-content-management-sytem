@@ -9,9 +9,9 @@ Submission Date: [Current Date]
 
 === LIVE DEPLOYMENT ===
 GitHub Repository: https://github.com/sanjujohn8055/portfolio-for-content-management-sytem
-Live Application: [Your Railway URL - e.g., https://portfolio-cms-production-xxxx.up.railway.app]
-Demo Portfolio: [Your Railway URL]/demo
-Admin Panel: [Your Railway URL]/admin/login
+Live Application: https://web-production-846c5.up.railway.app
+Demo Portfolio: https://web-production-846c5.up.railway.app/demo
+Admin Panel: https://web-production-846c5.up.railway.app/admin/login
 
 === LOGIN CREDENTIALS ===
 Admin Account:

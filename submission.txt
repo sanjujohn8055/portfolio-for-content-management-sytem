@@ -1,0 +1,30 @@
+Portfolio CMS - Professional Portfolio Management System
+Academic Project Submission
+
+GitHub Repository: https://github.com/sanjujohn8055/portfolio-for-content-management-sytem
+Live Application: https://web-production-846c5.up.railway.app
+
+Demo URLs:
+- Landing Page: https://web-production-846c5.up.railway.app
+- Demo Portfolio: https://web-production-846c5.up.railway.app/demo
+- Admin Panel: https://web-production-846c5.up.railway.app/admin/login
+
+Login Credentials:
+- Admin Username: admin
+- Admin Password: admin123
+- Guest Mode: Click "Try Demo Mode" (no login required)
+
+Key Features:
+- User registration and authentication
+- Project CRUD operations
+- Individual portfolio URLs
+- Responsive design
+- Admin dashboard
+- Guest mode for demos
+
+Technologies:
+- Backend: Flask, SQLAlchemy, Python
+- Frontend: HTML5, CSS3, Bootstrap 5
+- Database: SQLite
+- Deployment: Railway Cloud Platform
+- Version Control: Git & GitHub
