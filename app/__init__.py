@@ -32,7 +32,36 @@ def create_app():
     app.register_blueprint(main_bp)
     app.register_blueprint(auth_bp, url_prefix='/admin')
 
+    # Initialize database tables
     with app.app_context():
-        db.create_all()  # simple approach for SQLite early dev
+        try:
+            db.create_all()
+            
+            # Create admin user if it doesn't exist
+            from app.models import User, Project
+            admin = User.query.filter_by(username='admin').first()
+            if not admin:
+                admin = User(username='admin', email='admin@portfolio.com')
+                admin.set_password('admin123')
+                db.session.add(admin)
+                
+                # Create guest user
+                guest = User(username='guest', email='guest@portfolio.demo')
+                guest.set_password('guest123')
+                db.session.add(guest)
+                
+                # Create sample project
+                sample_project = Project(
+                    title='Portfolio CMS Demo',
+                    description='A modern portfolio management system built with Flask. Features include user authentication, project management, and responsive design.',
+                    url='https://github.com/sanjujohn8055/portfolio-for-content-management-sytem',
+                    user_id=None  # Demo project
+                )
+                db.session.add(sample_project)
+                
+                db.session.commit()
+        except Exception as e:
+            print(f"Database initialization error: {e}")
+            # Continue anyway - database might already exist
 
     return app
