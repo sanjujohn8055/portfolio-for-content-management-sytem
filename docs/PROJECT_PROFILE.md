@@ -2,16 +2,16 @@
 
 ## Project Overview
 **Project Name**: Portfolio Content Management System  
-**Target Group**: Software developers, designers, and professionals seeking to showcase their work  
-**Project Duration**: 8 weeks  
-**Development Methodology**: Agile/Iterative Development  
+**Target Users**: Developers, designers, and professionals who need online portfolios  
+**Development Time**: 8 weeks  
+**Approach**: Iterative development with regular testing  
 
-## Objectives and Scope
-### Primary Objectives:
-- Create a user-friendly platform for building professional portfolios
-- Enable easy project management through intuitive admin interface
-- Provide shareable portfolio URLs for career advancement
-- Deliver responsive, modern design that works across all devices
+## Goals and Scope
+### Main Goals:
+- Build a simple platform for creating professional portfolios
+- Make project management easy through a clean admin interface
+- Give users shareable portfolio URLs they can use for job applications
+- Ensure the design works well on different devices
 
 ### Project Scope:
 **Included:**

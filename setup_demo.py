@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Demo setup script for the Portfolio CMS
-Creates a default admin user and sample projects
+Setup script for Portfolio CMS demo data
+Creates admin user and sample projects for testing
 """
 
 from app import create_app, db

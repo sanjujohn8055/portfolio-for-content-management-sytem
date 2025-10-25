@@ -1,6 +1,6 @@
 # Portfolio CMS - Professional Portfolio Management System
 
-A modern, responsive web application that enables developers and professionals to create, manage, and share beautiful portfolios with ease.
+A web application for creating and managing professional portfolios. Built with Flask and designed for developers and professionals who need an easy way to showcase their work online.
 
 ## 🚀 Live Demo
 
@@ -14,69 +14,60 @@ A modern, responsive web application that enables developers and professionals t
 
 ## ✨ Features
 
-### 🎯 **Core Functionality**
-- **User Registration & Authentication** - Secure account creation and login
-- **Project Management** - Full CRUD operations for portfolio projects
-- **Individual Portfolio URLs** - Each user gets a shareable portfolio link
-- **Admin Dashboard** - Intuitive interface for content management
-- **Guest Mode** - Try all features without creating an account
+## Features
 
-### 🎨 **Design & UX**
-- **Responsive Design** - Works perfectly on desktop, tablet, and mobile
-- **Modern UI** - Clean, professional interface with smooth animations
-- **Intuitive Navigation** - Self-explanatory user interface
-- **Professional Templates** - Beautiful portfolio layouts
+- User registration and authentication system
+- Create, edit, and delete portfolio projects
+- Individual portfolio pages with custom URLs
+- Admin dashboard for managing content
+- Guest mode for trying features without signup
+- Responsive design that works on all devices
+- Clean, professional interface
+- Secure password handling and form validation
 
-### 🔧 **Technical Features**
-- **Secure Authentication** - Password hashing and session management
-- **Data Validation** - Comprehensive form validation and error handling
-- **Performance Optimized** - Fast loading times and efficient queries
-- **SEO Friendly** - Proper meta tags and semantic HTML
+## Technology Stack
 
-## 🛠️ Technology Stack
+**Backend:**
+- Flask - Python web framework
+- SQLAlchemy - Database ORM
+- Flask-Login - User authentication
+- Flask-WTF - Form handling
 
-### Backend
-- **Flask 2.3.4** - Python web framework
-- **SQLAlchemy 3.0.3** - Database ORM
-- **Flask-Login 0.6.2** - User session management
-- **Flask-WTF 1.1.1** - Form handling and CSRF protection
+**Frontend:**
+- HTML5, CSS3, JavaScript
+- Bootstrap 5 - Responsive design
+- Bootstrap Icons
 
-### Frontend
-- **HTML5 & CSS3** - Modern web standards
-- **Bootstrap 5.3** - Responsive framework
-- **JavaScript** - Interactive functionality
-- **Bootstrap Icons** - Consistent iconography
+**Database:**
+- SQLite for development
+- PostgreSQL ready for production
 
-### Database
-- **SQLite** - Development database
-- **PostgreSQL** - Production ready (configurable)
+## Installation
 
-## 🚀 Quick Start
-
-### Prerequisites
+### Requirements
 - Python 3.8+
 - Git
 
-### Installation
+### Setup Steps
 
-1. **Clone the repository**
+1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/portfolio-cms.git
+   git clone https://github.com/sanjujohn8055/portfolio-for-content-management-sytem.git
    cd portfolio-cms
    ```
 
-2. **Set up virtual environment**
+2. Create virtual environment:
    ```bash
    python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   source venv/bin/activate  # Windows: venv\Scripts\activate
    ```
 
-3. **Install dependencies**
+3. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
 
-4. **Initialize database and demo data**
+4. Initialize database:
    ```bash
    python setup_demo.py
    ```

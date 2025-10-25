@@ -1,20 +1,16 @@
 # Portfolio CMS - Project Abstract
 
-## Solution Overview
+## Project Overview
 
-The Portfolio Content Management System is a modern web application designed to solve the critical need for professional online presence among developers, designers, and other professionals. Built using Flask framework and modern web technologies, the system provides an intuitive platform for creating, managing, and sharing professional portfolios.
+The Portfolio Content Management System addresses the need for an accessible way for developers and professionals to create online portfolios. Many people struggle with building a professional web presence due to technical barriers or time constraints. This Flask-based web application provides a straightforward solution for creating, managing, and sharing professional portfolios without requiring extensive technical knowledge.
 
 ## Technical Approach
 
-### Architecture & Design
-The application follows the Model-View-Controller (MVC) architectural pattern, ensuring clean separation of concerns and maintainable code structure. The system utilizes Flask as the web framework, SQLAlchemy for database operations, and Bootstrap for responsive frontend design.
+### Technical Architecture
+The application uses the Model-View-Controller pattern to organize code and maintain clear separation between different components. Flask serves as the web framework, with SQLAlchemy handling database operations and Bootstrap providing the responsive frontend design.
 
-### Key Technical Decisions
-- **Flask Framework**: Chosen for its simplicity, flexibility, and extensive ecosystem
-- **SQLAlchemy ORM**: Provides database abstraction and prevents SQL injection attacks
-- **Bootstrap 5**: Ensures responsive design and professional appearance across all devices
-- **Flask-Login**: Implements secure session management and user authentication
-- **SQLite/PostgreSQL**: SQLite for development, PostgreSQL-ready for production scaling
+### Technology Choices
+Flask was selected for its straightforward approach to web development and good documentation. SQLAlchemy provides database abstraction and security features like SQL injection prevention. Bootstrap ensures the interface works well across different screen sizes. Flask-Login handles user sessions securely. The system uses SQLite during development and can be configured for PostgreSQL in production.
 
 ### Security Implementation
 The application implements comprehensive security measures including password hashing using Werkzeug, CSRF protection via Flask-WTF, input validation, and secure session management. User data is properly isolated, ensuring privacy and data integrity.

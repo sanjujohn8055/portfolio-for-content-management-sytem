@@ -1,19 +1,17 @@
-Portfolio CMS - Professional Portfolio Management System
+Portfolio CMS - Portfolio Management System
 Academic Project Submission
 
-=== PROJECT INFORMATION ===
+PROJECT INFORMATION
 Project Name: Portfolio Content Management System
-Student: [Your Name]
 Course: Software Engineering Portfolio
-Submission Date: [Current Date]
 
-=== LIVE DEPLOYMENT ===
+LIVE DEPLOYMENT
 GitHub Repository: https://github.com/sanjujohn8055/portfolio-for-content-management-sytem
 Live Application: https://web-production-846c5.up.railway.app
 Demo Portfolio: https://web-production-846c5.up.railway.app/demo
 Admin Panel: https://web-production-846c5.up.railway.app/admin/login
 
-=== LOGIN CREDENTIALS ===
+LOGIN CREDENTIALS
 Admin Account:
 - Username: admin
 - Password: admin123
