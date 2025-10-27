@@ -3,7 +3,7 @@
 
 **Student:** Sanju John  
 **Course:** Software Engineering Portfolio  
-**Submission Date:** October 2024  
+**Submission Date:** May 2025  
 **Project Phase:** Phase 1 - Conception  
 
 ---
@@ -27,8 +27,8 @@
 
 ### 1.1 Project Overview
 **Project Name:** Portfolio Content Management System  
-**Duration:** 8 weeks (October - December 2024)  
-**Methodology:** Agile/Iterative Development  
+**Duration:** 6 months (April - October 2025)  
+**Methodology:** Agile/Iterative Development with Continuous Learning  
 
 ### 1.2 Project Objectives
 The Portfolio CMS aims to provide developers and professionals with an accessible platform for creating and managing professional online portfolios. The system addresses the common challenge of technical barriers preventing individuals from establishing a professional web presence.
@@ -60,7 +60,6 @@ The Portfolio CMS aims to provide developers and professionals with an accessibl
 
 ### 2.2 User Characteristics
 - **Technical Skill Level:** Beginner to intermediate
-- **Age Range:** 20-40 years
 - **Primary Need:** Professional online presence without technical complexity
 - **Usage Context:** Job applications, client acquisition, networking
 
@@ -81,6 +80,16 @@ Agile methodology is well-suited for this project because:
 - Regular testing ensures quality and usability
 - Iterative approach allows for risk mitigation
 - Flexible scope management accommodates time constraints
+- Allows integration of continuous learning from external resources
+
+### 3.3 Learning Approach
+The project incorporates continuous learning beyond course materials:
+- **Flask Documentation**: Official Flask documentation for best practices
+- **Security Resources**: OWASP guidelines and security implementation guides
+- **Design Principles**: Modern web design and UX/UI principles from industry resources
+- **Testing Methodologies**: Software testing approaches from additional literature
+- **Deployment Practices**: Cloud deployment and DevOps practices from online tutorials
+- **Exam Preparation**: Integration of project experience with theoretical study for comprehensive understanding
 
 ---
 
@@ -88,54 +97,55 @@ Agile methodology is well-suited for this project because:
 
 ### 4.1 Project Phases and Milestones
 
-#### Phase 1: Conception (Weeks 1-2)
-**Timeline:** October 1-14, 2024
-- **Week 1:**
+#### Phase 1: Research and Conception (April - May 2025)
+**Timeline:** April - May 2025
+- **Research Activities:**
   - Requirements gathering and analysis
   - Target group research
-  - Technology stack selection
-- **Week 2:**
+  - Additional study of Flask framework beyond course materials
+  - Research on modern web development practices and security
+- **Design Activities:**
   - System architecture design
   - Database schema planning
   - UI/UX mockups creation
+  - Technology stack selection and justification
 - **Milestone 1:** Complete project documentation and design approval
 
-#### Phase 2: Core Development (Weeks 3-5)
-**Timeline:** October 15 - November 5, 2024
-- **Week 3:**
+#### Phase 2: Development and Learning (June - August 2025)
+**Timeline:** June - August 2025
+- **Core Development:**
   - Project setup and environment configuration
   - Database model implementation
-  - Basic Flask application structure
-- **Week 4:**
-  - User authentication system
-  - Project CRUD operations
-  - Basic frontend templates
-- **Week 5:**
+  - User authentication system development
+  - Project CRUD operations implementation
+- **Advanced Features:**
   - Admin dashboard development
-  - Form validation and security
+  - Form validation and security implementation
   - Responsive design implementation
+  - Guest mode functionality
+- **Learning Integration:**
+  - Study of Flask best practices through additional resources
+  - Integration of security principles learned from supplementary materials
+  - Application of responsive design concepts from external tutorials
 - **Milestone 2:** Core functionality complete and testable
 
-#### Phase 3: Enhancement & Testing (Weeks 6-7)
-**Timeline:** November 6-19, 2024
-- **Week 6:**
-  - Guest mode implementation
-  - UI/UX refinements
-  - Security hardening
-- **Week 7:**
-  - Comprehensive testing
-  - Bug fixes and optimizations
-  - Documentation updates
-- **Milestone 3:** Feature-complete application ready for deployment
-
-#### Phase 4: Deployment & Finalization (Week 8)
-**Timeline:** November 20-26, 2024
-- **Week 8:**
-  - Cloud deployment setup
-  - Production testing
-  - Final documentation
-  - Project submission preparation
-- **Milestone 4:** Live application deployed and documented
+#### Phase 3: Testing, Deployment and Exam Preparation (September - October 2025)
+**Timeline:** September - October 2025
+- **Quality Assurance:**
+  - Comprehensive testing suite development
+  - Security testing and vulnerability assessment
+  - Performance optimization and code refactoring
+- **Deployment:**
+  - Cloud deployment setup and configuration
+  - Production testing and monitoring setup
+- **Academic Preparation:**
+  - Exam preparation using course materials and additional resources
+  - Review of concepts learned during project development
+  - Integration of practical experience with theoretical knowledge
+- **Documentation:**
+  - Final documentation and submission preparation
+  - Reflection on learning outcomes and challenges overcome
+- **Milestone 3:** Live application deployed and comprehensive documentation complete
 
 ### 4.2 Detailed Work Packages
 
@@ -442,5 +452,5 @@ Figure 2: Detailed Component Structure
 ---
 
 **Document Version:** 1.0  
-**Last Updated:** October 2024  
+**Last Updated:** May 2025  
 **Author:** Sanju John

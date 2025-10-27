@@ -4,7 +4,8 @@ Academic Project Submission
 PROJECT INFORMATION
 Project Name: Portfolio Content Management System
 Course: Software Engineering Portfolio
-Development Period: April - June 2025
+Development Period: April - October 2025
+Learning Approach: Course materials supplemented with additional research and resources
 
 LIVE DEPLOYMENT
 GitHub Repository: https://github.com/sanjujohn8055/portfolio-for-content-management-sytem
