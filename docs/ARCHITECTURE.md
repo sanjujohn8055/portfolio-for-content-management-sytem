@@ -8,17 +8,27 @@ The Portfolio CMS is a web-based application built using the Model-View-Controll
 
 ### Backend Technologies
 - **Flask 2.3.4**: Python web framework for application logic
+  - *Justification*: Lightweight, flexible framework with minimal boilerplate. Extensive documentation and community support. Suitable for rapid prototyping and production deployment. Python ecosystem compatibility enables easy integration with data science tools if needed for future analytics features.
 - **SQLAlchemy 3.0.3**: ORM for database operations
+  - *Justification*: Provides database abstraction enabling easy migration between SQLite (development) and PostgreSQL (production). Built-in protection against SQL injection attacks. Elegant relationship handling and query optimization. Mature, well-tested library with excellent documentation.
 - **Flask-Login 0.6.2**: User session management
+  - *Justification*: Industry-standard session management with minimal configuration. Secure session handling with built-in protection against session hijacking. Integrates seamlessly with Flask application structure. Supports "remember me" functionality for improved user experience.
 - **Flask-WTF 1.1.1**: Form handling and CSRF protection
+  - *Justification*: Provides automatic CSRF protection for all forms. Comprehensive form validation capabilities with both client and server-side validation. Native Flask integration with Jinja2 templates. Reduces boilerplate code for form handling.
 - **Werkzeug**: Password hashing and security utilities
+  - *Justification*: Provides PBKDF2 password hashing with configurable iterations. Industry-standard security practices built-in. Part of Flask ecosystem ensuring compatibility. Handles secure password storage and verification.
 
 ### Frontend Technologies
 - **HTML5**: Semantic markup structure
+  - *Justification*: Modern web standard with semantic elements improving accessibility and SEO. Native form validation capabilities. Broad browser support and future-proof technology choice.
 - **CSS3**: Custom styling with CSS variables and animations
+  - *Justification*: CSS custom properties enable consistent theming and easy maintenance. Modern layout techniques (Flexbox, Grid) provide responsive design capabilities. Animations enhance user experience without JavaScript dependencies.
 - **Bootstrap 5.3**: Responsive grid system and components
+  - *Justification*: Rapid development of professional-looking interfaces. Mobile-first responsive design approach. Extensive component library reduces custom CSS requirements. Well-documented with large community support. Version 5.3 removes jQuery dependency improving performance.
 - **Bootstrap Icons**: Consistent iconography
+  - *Justification*: SVG-based icons ensuring crisp display at all resolutions. Consistent design language throughout application. Lightweight alternative to font-based icon systems. Easy integration with Bootstrap components.
 - **JavaScript**: Client-side interactivity and form enhancements
+  - *Justification*: Vanilla JavaScript chosen over frameworks to minimize complexity and bundle size. Provides progressive enhancement for form validation and user interface improvements. No build process required simplifying development workflow.
 
 ### Database
 - **SQLite**: Development database (file-based)

@@ -3,24 +3,31 @@
 ## Functional Requirements
 
 ### FR1: User Management
-- **FR1.1**: Users can register with username, email, and password
-- **FR1.2**: Users can log in with username and password
-- **FR1.3**: Users can log out securely
-- **FR1.4**: Guest mode allows feature exploration without registration
-- **FR1.5**: Password validation ensures minimum security standards
+- **FR1.1**: System shall allow user registration with username (3-20 characters), valid email address, and password (minimum 6 characters)
+- **FR1.2**: System shall authenticate users using username and password combination with session timeout of 24 hours
+- **FR1.3**: System shall provide secure logout functionality that invalidates user session and redirects to homepage
+- **FR1.4**: System shall provide guest mode allowing access to admin dashboard without registration for demonstration purposes
+- **FR1.5**: System shall validate password strength requiring minimum 6 characters and reject common passwords
+- **FR1.6**: System shall prevent duplicate usernames and email addresses during registration
+- **FR1.7**: System shall hash passwords using Werkzeug PBKDF2 algorithm before database storage
 
 ### FR2: Portfolio Management
-- **FR2.1**: Each user gets a unique portfolio URL (/portfolio/username)
-- **FR2.2**: Users can view their own portfolio as visitors would see it
-- **FR2.3**: Portfolios display user information and project list
-- **FR2.4**: Public portfolios are accessible without authentication
+- **FR2.1**: System shall generate unique portfolio URL in format /portfolio/{username} for each registered user
+- **FR2.2**: System shall allow users to preview their portfolio in visitor mode without admin controls visible
+- **FR2.3**: Portfolio pages shall display user's username, creation date, and chronologically ordered project list (newest first)
+- **FR2.4**: Public portfolio URLs shall be accessible to anonymous visitors without authentication requirements
+- **FR2.5**: System shall display "No projects yet" message when user has no projects in their portfolio
+- **FR2.6**: Portfolio pages shall be responsive and display correctly on mobile devices (minimum 320px width)
 
 ### FR3: Project Management
-- **FR3.1**: Users can create new projects with title, description, URL, and image
-- **FR3.2**: Users can edit existing projects
-- **FR3.3**: Users can delete projects with confirmation
-- **FR3.4**: Projects are displayed in chronological order (newest first)
-- **FR3.5**: Project details page shows full information
+- **FR3.1**: System shall allow users to create projects with mandatory title (max 150 characters) and description (unlimited text), optional URL and image path
+- **FR3.2**: System shall provide edit functionality for all project fields with form pre-populated with existing data
+- **FR3.3**: System shall require confirmation dialog before project deletion and permanently remove project from database
+- **FR3.4**: System shall display projects in reverse chronological order based on creation timestamp
+- **FR3.5**: System shall provide detailed project view page showing full description, creation date, and external URL if provided
+- **FR3.6**: System shall validate project URLs to ensure proper format (http/https protocol required)
+- **FR3.7**: System shall limit project title to 150 characters and display validation error if exceeded
+- **FR3.8**: System shall associate projects with user accounts ensuring users only see/edit their own projects
 
 ### FR4: Admin Interface
 - **FR4.1**: Dashboard shows project statistics and quick actions
@@ -36,32 +43,54 @@
 
 ## Non-Functional Requirements
 
-### NFR1: Performance
-- **NFR1.1**: Page load time < 3 seconds on standard broadband
-- **NFR1.2**: Database queries optimized for reasonable response times
-- **NFR1.3**: Static assets (CSS, images) cached for performance
+### NFR1: Performance Requirements
+- **NFR1.1**: System shall load homepage within 2 seconds on 10 Mbps broadband connection
+- **NFR1.2**: Database queries shall execute within 500ms for single-user operations
+- **NFR1.3**: System shall support minimum 10 concurrent users without performance degradation
+- **NFR1.4**: Portfolio pages shall load within 3 seconds including all projects and images
+- **NFR1.5**: Admin dashboard shall display within 2 seconds after successful authentication
+- **NFR1.6**: Static assets (CSS, JS, images) shall be cached with 24-hour expiration headers
 
-### NFR2: Security
-- **NFR2.1**: Passwords hashed using Werkzeug security functions
-- **NFR2.2**: CSRF protection on all forms via Flask-WTF
-- **NFR2.3**: SQL injection prevention through SQLAlchemy ORM
-- **NFR2.4**: User session management via Flask-Login
+### NFR2: Security Requirements
+- **NFR2.1**: System shall hash passwords using PBKDF2 algorithm with minimum 100,000 iterations
+- **NFR2.2**: All forms shall include CSRF tokens with 1-hour expiration time
+- **NFR2.3**: System shall prevent SQL injection through parameterized queries via SQLAlchemy ORM
+- **NFR2.4**: User sessions shall expire after 24 hours of inactivity
+- **NFR2.5**: System shall validate all user inputs and sanitize HTML content to prevent XSS attacks
+- **NFR2.6**: System shall use HTTPS in production environment with TLS 1.2 minimum
+- **NFR2.7**: Database shall not store passwords in plain text format
+- **NFR2.8**: System shall log failed login attempts and implement rate limiting after 5 failed attempts
 
-### NFR3: Usability
-- **NFR3.1**: Intuitive navigation with clear menu structure
-- **NFR3.2**: Consistent visual design across all pages
-- **NFR3.3**: Form validation with helpful error messages
-- **NFR3.4**: Mobile-first responsive design
+### NFR3: Usability Requirements
+- **NFR3.1**: Navigation menu shall be accessible within 2 clicks from any page
+- **NFR3.2**: System shall maintain consistent color scheme and typography across all pages
+- **NFR3.3**: Form validation errors shall appear within 1 second of input and provide specific correction guidance
+- **NFR3.4**: System shall be fully functional on devices with minimum 320px screen width
+- **NFR3.5**: All interactive elements shall have minimum 44px touch target size for mobile accessibility
+- **NFR3.6**: System shall provide visual feedback for all user actions within 200ms
+- **NFR3.7**: Error messages shall be displayed in user-friendly language without technical jargon
 
-### NFR4: Reliability
-- **NFR4.1**: Application handles errors gracefully
-- **NFR4.2**: Database transactions ensure data consistency
-- **NFR4.3**: User data isolated between accounts
+### NFR4: Reliability Requirements
+- **NFR4.1**: System shall handle database connection failures gracefully with user-friendly error messages
+- **NFR4.2**: Database transactions shall maintain ACID properties with automatic rollback on failure
+- **NFR4.3**: System shall ensure complete data isolation between user accounts with no cross-user data access
+- **NFR4.4**: System shall have 99% uptime availability during business hours (9 AM - 5 PM)
+- **NFR4.5**: System shall automatically recover from temporary network failures within 30 seconds
+- **NFR4.6**: Data integrity shall be maintained with foreign key constraints and validation rules
 
-### NFR5: Maintainability
-- **NFR5.1**: Clean code structure with separation of concerns
-- **NFR5.2**: Comprehensive code comments
-- **NFR5.3**: Modular architecture for easy extension
+### NFR5: Maintainability Requirements
+- **NFR5.1**: Code shall follow PEP 8 Python style guidelines with maximum 79 characters per line
+- **NFR5.2**: All functions shall include docstrings explaining purpose, parameters, and return values
+- **NFR5.3**: System architecture shall support addition of new features without modifying existing core functionality
+- **NFR5.4**: Database schema shall support migration scripts for version updates
+- **NFR5.5**: Configuration shall be externalized in environment variables for different deployment environments
+- **NFR5.6**: Code coverage shall be minimum 80% for critical business logic functions
+
+### NFR6: Compatibility Requirements
+- **NFR6.1**: System shall support Chrome 90+, Firefox 88+, Safari 14+, and Edge 90+
+- **NFR6.2**: System shall be compatible with Python 3.8+ runtime environments
+- **NFR6.3**: Database shall be compatible with SQLite 3.35+ and PostgreSQL 12+
+- **NFR6.4**: System shall function correctly on Windows 10+, macOS 10.15+, and Ubuntu 18.04+
 
 ## User Stories
 
