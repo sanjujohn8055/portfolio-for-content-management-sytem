@@ -3,7 +3,7 @@
 ## Project Overview
 **Project Name**: Portfolio Content Management System  
 **Target Users**: Developers, designers, and professionals who need online portfolios  
-**Development Time**: 8 weeks  
+**Development Time**: 8 weeks (April - June 2025)  
 **Approach**: Iterative development with regular testing  
 
 ## Goals and Scope
@@ -53,44 +53,44 @@
 - **Technology Learning Curve**: Mitigated by using well-documented Flask ecosystem
 
 ## Project Plan
-### Phase 1: Conception (October 1-14, 2024)
-**Week 1 (Oct 1-7):**
-- Oct 1-2: Requirements gathering and user research (16 hours)
-- Oct 3-4: System architecture design and database schema (16 hours)
-- Oct 5-7: Technology stack evaluation and selection (12 hours)
+### Phase 1: Conception (April 21 - May 4, 2025)
+**Week 1 (Apr 21-27):**
+- Apr 21-22: Requirements gathering and user research (16 hours)
+- Apr 23-24: System architecture design and database schema (16 hours)
+- Apr 25-27: Technology stack evaluation and selection (12 hours)
 
-**Week 2 (Oct 8-14):**
-- Oct 8-10: UI/UX wireframes and mockups creation (20 hours)
-- Oct 11-12: Project documentation and risk assessment (12 hours)
-- Oct 13-14: Phase 1 submission preparation (8 hours)
+**Week 2 (Apr 28 - May 4):**
+- Apr 28-30: UI/UX wireframes and mockups creation (20 hours)
+- May 1-2: Project documentation and risk assessment (12 hours)
+- May 3-4: Phase 1 submission preparation (8 hours)
 
-### Phase 2: Development (October 15 - November 5, 2024)
-**Week 3 (Oct 15-21):**
-- Oct 15-16: Development environment setup and Flask project initialization (12 hours)
-- Oct 17-18: Database models implementation (User, Project tables) (16 hours)
-- Oct 19-21: Basic authentication system (registration, login, logout) (20 hours)
+### Phase 2: Development (May 5-25, 2025)
+**Week 3 (May 5-11):**
+- May 5-6: Development environment setup and Flask project initialization (12 hours)
+- May 7-8: Database models implementation (User, Project tables) (16 hours)
+- May 9-11: Basic authentication system (registration, login, logout) (20 hours)
 
-**Week 4 (Oct 22-28):**
-- Oct 22-23: Project CRUD operations implementation (16 hours)
-- Oct 24-25: Admin dashboard development (16 hours)
-- Oct 26-28: Form validation and security implementation (16 hours)
+**Week 4 (May 12-18):**
+- May 12-13: Project CRUD operations implementation (16 hours)
+- May 14-15: Admin dashboard development (16 hours)
+- May 16-18: Form validation and security implementation (16 hours)
 
-**Week 5 (Oct 29 - Nov 5):**
-- Oct 29-30: Frontend templates and responsive design (16 hours)
-- Oct 31-Nov 1: Guest mode functionality implementation (12 hours)
-- Nov 2-3: Integration testing and bug fixes (16 hours)
-- Nov 4-5: Phase 2 documentation update (8 hours)
+**Week 5 (May 19-25):**
+- May 19-20: Frontend templates and responsive design (16 hours)
+- May 21-22: Guest mode functionality implementation (12 hours)
+- May 23-24: Integration testing and bug fixes (16 hours)
+- May 25: Phase 2 documentation update (8 hours)
 
-### Phase 3: Testing & Deployment (November 6-19, 2024)
-**Week 6 (Nov 6-12):**
-- Nov 6-7: Comprehensive testing suite development (16 hours)
-- Nov 8-9: Security testing and vulnerability assessment (12 hours)
-- Nov 10-12: Performance optimization and code refactoring (20 hours)
+### Phase 3: Testing & Deployment (May 26 - June 8, 2025)
+**Week 6 (May 26 - June 1):**
+- May 26-27: Comprehensive testing suite development (16 hours)
+- May 28-29: Security testing and vulnerability assessment (12 hours)
+- May 30 - June 1: Performance optimization and code refactoring (20 hours)
 
-**Week 7 (Nov 13-19):**
-- Nov 13-14: Cloud deployment setup and configuration (16 hours)
-- Nov 15-16: Production testing and monitoring setup (12 hours)
-- Nov 17-19: Final documentation and submission preparation (20 hours)
+**Week 7 (June 2-8):**
+- June 2-3: Cloud deployment setup and configuration (16 hours)
+- June 4-5: Production testing and monitoring setup (12 hours)
+- June 6-8: Final documentation and submission preparation (20 hours)
 
 ## Project Organization
 **Developer**: Solo development project  
