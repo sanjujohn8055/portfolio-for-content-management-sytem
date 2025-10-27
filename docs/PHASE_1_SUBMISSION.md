@@ -89,7 +89,7 @@ The project incorporates continuous learning beyond course materials:
 - **Design Principles**: Modern web design and UX/UI principles from industry resources
 - **Testing Methodologies**: Software testing approaches from additional literature
 - **Deployment Practices**: Cloud deployment and DevOps practices from online tutorials
-- **Exam Preparation**: Integration of project experience with theoretical study for comprehensive understanding
+- **Knowledge Integration**: Combining practical project experience with theoretical concepts for comprehensive understanding
 
 ---
 
@@ -138,10 +138,10 @@ The project incorporates continuous learning beyond course materials:
 - **Deployment:**
   - Cloud deployment setup and configuration
   - Production testing and monitoring setup
-- **Academic Preparation:**
-  - Exam preparation using course materials and additional resources
+- **Knowledge Integration:**
   - Review of concepts learned during project development
   - Integration of practical experience with theoretical knowledge
+  - Documentation of lessons learned and best practices
 - **Documentation:**
   - Final documentation and submission preparation
   - Reflection on learning outcomes and challenges overcome

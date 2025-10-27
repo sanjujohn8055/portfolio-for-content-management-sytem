@@ -3,8 +3,8 @@
 ## Project Overview
 **Project Name**: Portfolio Content Management System  
 **Target Users**: Developers, designers, and professionals who need online portfolios  
-**Development Time**: 8 weeks (April - June 2025)  
-**Approach**: Iterative development with regular testing  
+**Development Period**: April - October 2025  
+**Approach**: Iterative development with regular testing and continuous learning  
 
 ## Goals and Scope
 ### Main Goals:
@@ -53,32 +53,51 @@
 - **Technology Learning Curve**: Mitigated by using well-documented Flask ecosystem
 
 ## Project Plan
-### Phase 1: Conception (April 21 - May 4, 2025)
-**Week 1 (Apr 21-27):**
-- Apr 21-22: Requirements gathering and user research (16 hours)
-- Apr 23-24: System architecture design and database schema (16 hours)
-- Apr 25-27: Technology stack evaluation and selection (12 hours)
+### Phase 1: Research and Conception (April - May 2025)
+**April 2025:**
+- Requirements gathering and user research
+- Additional study of web development frameworks beyond course materials
+- Research on modern portfolio design trends and user experience principles
+- System architecture design and database schema planning
+- Technology stack evaluation and selection
 
-**Week 2 (Apr 28 - May 4):**
-- Apr 28-30: UI/UX wireframes and mockups creation (20 hours)
-- May 1-2: Project documentation and risk assessment (12 hours)
-- May 3-4: Phase 1 submission preparation (8 hours)
+**May 2025:**
+- UI/UX wireframes and mockups creation
+- Project documentation and comprehensive risk assessment
+- Phase 1 submission preparation
+- Continued learning through online resources and Flask documentation
 
-### Phase 2: Development (May 5-25, 2025)
-**Week 3 (May 5-11):**
-- May 5-6: Development environment setup and Flask project initialization (12 hours)
-- May 7-8: Database models implementation (User, Project tables) (16 hours)
-- May 9-11: Basic authentication system (registration, login, logout) (20 hours)
+### Phase 2: Development and Learning (June - August 2025)
+**June 2025:**
+- Development environment setup and Flask project initialization
+- Database models implementation (User, Project tables)
+- Study of Flask best practices and security implementations
+- Basic authentication system development (registration, login, logout)
 
-**Week 4 (May 12-18):**
-- May 12-13: Project CRUD operations implementation (16 hours)
-- May 14-15: Admin dashboard development (16 hours)
-- May 16-18: Form validation and security implementation (16 hours)
+**July 2025:**
+- Project CRUD operations implementation
+- Admin dashboard development and user interface design
+- Form validation and security implementation
+- Integration of Bootstrap framework and responsive design principles
 
-**Week 5 (May 19-25):**
-- May 19-20: Frontend templates and responsive design (16 hours)
-- May 21-22: Guest mode functionality implementation (12 hours)
-- May 23-24: Integration testing and bug fixes (16 hours)
+**August 2025:**
+- Frontend templates and responsive design completion
+- Guest mode functionality implementation
+- Integration testing and bug fixes
+- Exam preparation using additional resources beyond course materials
+
+### Phase 3: Testing, Deployment and Exam Preparation (September - October 2025)
+**September 2025:**
+- Comprehensive testing suite development
+- Security testing and vulnerability assessment
+- Performance optimization and code refactoring
+- Intensive exam preparation using supplementary learning materials
+
+**October 2025:**
+- Cloud deployment setup and configuration
+- Production testing and monitoring setup
+- Final documentation and submission preparation
+- Final preparation and review of all concepts learned
 - May 25: Phase 2 documentation update (8 hours)
 
 ### Phase 3: Testing & Deployment (May 26 - June 8, 2025)
