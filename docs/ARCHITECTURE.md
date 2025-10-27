@@ -31,6 +31,8 @@ The Portfolio CMS is a web-based application built using the Model-View-Controll
 
 ## System Architecture Diagram
 
+**Figure 1: Portfolio CMS System Architecture Overview**
+
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                    PRESENTATION LAYER                        │

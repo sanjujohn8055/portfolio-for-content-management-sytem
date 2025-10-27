@@ -76,6 +76,17 @@
 **Stakeholders**: Academic supervisor, potential users (developers)  
 **Tools**: Flask, SQLAlchemy, Bootstrap, Git, GitHub  
 
+## Risk Assessment
+### Technical Risks:
+- **Database Performance**: Mitigated by SQLite for development, PostgreSQL for production
+- **Security Vulnerabilities**: Addressed through Flask-WTF CSRF protection and input validation
+- **Scalability**: Designed with user-specific data isolation
+
+### Project Risks:
+- **Scope Creep**: Controlled through clear MVP definition
+- **Time Constraints**: Managed via iterative development approach
+- **Technology Learning Curve**: Mitigated by using well-documented Flask ecosystem
+
 ## Success Criteria
 - Functional web application with all core features
 - Responsive design working on desktop and mobile
