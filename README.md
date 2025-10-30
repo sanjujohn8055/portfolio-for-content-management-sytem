@@ -1,4 +1,4 @@
-# Portfolio CMS - Professional Portfolio Management System
+# Portfolio CMS - Professional Portfolio Content Management System
 
 A web application for creating and managing professional portfolios. Built with Flask and designed for developers and professionals who need an easy way to showcase their work online.
 
